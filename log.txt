@@ -1,0 +1,4 @@
+2024-03-31 16:40:41,442 The file has the header line
+2024-03-31 16:40:41,572 Completed reading the files
+2024-03-31 16:40:41,574 The dataframe was created
+2024-03-31 16:40:41,584 The script completed in 0.14 seconds
