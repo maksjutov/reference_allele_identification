@@ -60,13 +60,13 @@ with open(path_to_snp_file) as SNPs:
         allele1 = line_as_list[3]
         allele2 = line_as_list[4]
 
-        # Assume one-based system
+        # Assume zero-based system
 
         reference_file = pysam.FastaFile(filename=path_to_fasta_dir + "{}.fa".format(chr),
                                          filepath_index=path_to_fasta_dir + "{}.fa.fai".format(chr))
         # Get reference allele to put it later in column
-        reference_allele = reference_file.fetch(reference=chr, start=GB38_position_as_int,
-                                                end=GB38_position_as_int + 1)
+        reference_allele = reference_file.fetch(reference=chr, start=GB38_position_as_int - 1,
+                                                end=GB38_position_as_int)
 
         # Add column based on reference value
 
