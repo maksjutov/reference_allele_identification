@@ -60,7 +60,7 @@ with open(path_to_snp_file) as SNPs:
         allele1 = line_as_list[3]
         allele2 = line_as_list[4]
 
-        # Assume zero-based system
+        # Assume one-based system
 
         reference_file = pysam.FastaFile(filename=path_to_fasta_dir + "{}.fa".format(chr),
                                          filepath_index=path_to_fasta_dir + "{}.fa.fai".format(chr))
